@@ -1,0 +1,13 @@
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\Test Console.exe
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\Test Console.pdb
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\Test Console.xml
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\HTML to XAML Converter.dll
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\HTML to XAML Converter.pdb
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\HTML to XAML Converter.xml
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test_Console.Resources.resources
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.exe
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.xml
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.pdb
