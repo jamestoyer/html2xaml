@@ -8,4 +8,11 @@ Friend Module XamlConstants
     Public Const span As String = "Span"
     Public Const xamlNamespace As String = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
+#Region "Image Constants"
+    Public Const image As String = "Image"
+    Public Const imageAlign As String = "HorizontalAlignment"
+    Public Const imageHeight As String = "Height"
+    Public Const imageSource As String = "Source"
+    Public Const imageWidth As String = "Width"
+#End Region
 End Module
