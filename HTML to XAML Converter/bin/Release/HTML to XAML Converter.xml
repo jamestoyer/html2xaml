@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HTMLtoXAMLConverter
+</name>
+</assembly>
+<members>
+<member name="P:Html2Xaml.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Html2Xaml.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Html2Xaml.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Html2Xaml.Converter.ConvertToXaml(System.String,System.Boolean)">
+	<summary>
+ Converts a HTML string into a fully formed xaml string.
+ </summary>
+	<param name="html">The HTML string to be converted</param>
+	<param name="flowDoc">Determines whether the converted XAML should be enclosed in Flow Document tags</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

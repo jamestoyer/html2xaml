@@ -49,18 +49,33 @@ Friend Module HtmlToXamlConverter
         Select Case c.Name
             Case HtmlConstants.paragraph
                 newElement = owner.OwnerDocument.CreateElement(XamlConstants.paragraph, XamlConstants.xamlNamespace)
+
             Case HtmlConstants.hyperlink
                 newElement = makeHyperlink(c, owner.OwnerDocument)
+
             Case HtmlConstants.image
                 newElement = makeImage(c, owner.OwnerDocument)
-            Case "#text"
+
+            Case HtmlConstants.text
                 newElement = owner.OwnerDocument.CreateTextNode(c.OuterXml)
-            Case HtmlConstants.stript
+
+            Case HtmlConstants.script, HtmlConstants.comment
                 ' HACK: Here I'm making a concious decision to remove all scripting and its contents
                 newElement = owner.OwnerDocument.CreateTextNode("")
+
+            Case HtmlConstants.heading1, HtmlConstants.heading2, HtmlConstants.heading3, HtmlConstants.heading4, HtmlConstants.heading5, HtmlConstants.heading6
+                newElement = constructHeading(c, owner.OwnerDocument)
+
+            Case HtmlConstants.lineBreak
+                newElement = owner.OwnerDocument.CreateElement(XamlConstants.lineBreak, XamlConstants.xamlNamespace)
+
+            Case HtmlConstants.bold
+                newElement = owner.OwnerDocument.CreateElement(XamlConstants.bold, XamlConstants.xamlNamespace)
+
             Case Else
                 ' Do not convert the element as it is an unknown element
                 newElement = owner.OwnerDocument.CreateElement(XamlConstants.span, XamlConstants.xamlNamespace)
+
         End Select
         Return newElement
     End Function
@@ -131,6 +146,32 @@ Friend Module HtmlToXamlConverter
             Next
         End If
 
+        Return newElement
+    End Function
+
+    Private Function constructHeading(ByVal c As XmlNode, ByVal xmlDocument As XmlDocument) As XmlNode
+        ' Create a new paragraph element to store the header in
+        Dim newElement As XmlNode = xmlDocument.CreateElement(XamlConstants.paragraph, XamlConstants.xamlNamespace)
+
+        ' Create a font size attribute then assign the correct value to it
+        Dim newAttribute As XmlAttribute = xmlDocument.CreateAttribute(XamlConstants.heading)
+        Select Case c.Name
+            Case HtmlConstants.heading1
+                newAttribute.Value = XamlConstants.heading1
+            Case HtmlConstants.heading2
+                newAttribute.Value = XamlConstants.heading2
+            Case HtmlConstants.heading3
+                newAttribute.Value = XamlConstants.heading3
+            Case HtmlConstants.heading4
+                newAttribute.Value = XamlConstants.heading4
+            Case HtmlConstants.heading5
+                newAttribute.Value = XamlConstants.heading5
+            Case HtmlConstants.heading6
+                newAttribute.Value = XamlConstants.heading6
+        End Select
+
+        ' Add the attribute to the element and return
+        newElement.Attributes.Append(newAttribute)
         Return newElement
     End Function
 
