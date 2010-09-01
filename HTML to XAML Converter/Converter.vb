@@ -33,11 +33,11 @@ Public Module Converter
     End Function
 
     Private Function cleanHtml(ByVal html As String) As String
-        ' Replace all whitespace 
-        html = Replace(html, "&nbsp;", " ")
+        ' Clean up the html
+        cleanHtml = System.Web.HttpUtility.HtmlDecode(html)
 
         ' Make sure that that string has a root element
-        cleanHtml = String.Format("<{0}>{1}</{0}>", HtmlConstants.document, html)
+        cleanHtml = String.Format("<{0}>{1}</{0}>", HtmlConstants.document, cleanHtml)
     End Function
 
 End Module

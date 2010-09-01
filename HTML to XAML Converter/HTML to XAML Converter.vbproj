@@ -8,7 +8,8 @@
     <AssemblyName>HTML to XAML Converter</AssemblyName>
     <OutputType>Library</OutputType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <MyType>Custom</MyType>
     <ProjectGuid>{80FF08EE-EB1C-4CED-BB57-CD4BDCB0BA55}</ProjectGuid>
   </PropertyGroup>
@@ -75,6 +76,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System" />

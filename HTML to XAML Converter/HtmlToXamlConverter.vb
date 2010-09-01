@@ -32,18 +32,25 @@ Friend Module HtmlToXamlConverter
     Private Function checkForChildren(ByVal content As XmlNode, ByVal rootElement As XmlNode) As XmlNode
         For Each c As XmlNode In content.ChildNodes
             ' Create a new element with the correct xaml formatting and attributes
-            Dim unknownElement As Boolean = New Boolean
-            Dim newElement As XmlNode = replaceWithXaml(c, rootElement, unknownElement)
+            Dim childCheck As Boolean = New Boolean
+            childCheck = True
+            Dim newElement As XmlNode = replaceWithXaml(c, rootElement, childCheck)
 
-            ' This is all good and well but we haven't considered children of the element
+            ' See if we should check for children
+            If childCheck = True Then
+                ' This is all good and well but we haven't considered children of the element
                 rootElement.AppendChild(checkForChildren(c, newElement))
+            Else
+                rootElement.AppendChild(newElement)
+                childCheck = True
+            End If
         Next
 
         ' Return the new root element
         Return rootElement
     End Function
 
-    Private Function replaceWithXaml(ByVal c As XmlNode, ByVal owner As XmlNode, ByRef unknownElement As Boolean) As XmlNode
+    Private Function replaceWithXaml(ByVal c As XmlNode, ByVal owner As XmlNode, ByRef checkForChildren As Boolean) As XmlNode
         ' Compare the elements name with some standard html elements
         Dim newElement As XmlNode
         Select Case c.Name
@@ -62,7 +69,7 @@ Friend Module HtmlToXamlConverter
             Case HtmlConstants.script, HtmlConstants.comment
                 ' HACK: Here I'm making a concious decision to remove all scripting and its contents
                 newElement = owner.OwnerDocument.CreateTextNode("")
-
+                checkForChildren = False
             Case HtmlConstants.heading1, HtmlConstants.heading2, HtmlConstants.heading3, HtmlConstants.heading4, HtmlConstants.heading5, HtmlConstants.heading6
                 newElement = constructHeading(c, owner.OwnerDocument)
 

@@ -11,3 +11,4 @@ D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Convert
 D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.exe
 D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.xml
 D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\obj\x86\Debug\Test Console.pdb
+D:\Desktop\Documents\Software Development\ToyerTechnologies\HTML to XAML Converter\Trunk\HTML to XAML Converter\Test Console\bin\Debug\Test Console.exe.config
